@@ -202,6 +202,13 @@
             <version>${junit.version}</version>
             <scope>compile</scope>
         </dependency>
+
+        <!-- IDEA中SpringBoot热部署Dev-tool -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
     </dependencies>
 
     <!--dependencyManagement 标签用于控制子模块的依赖版本等信息，该标签只用来控制版本，不能将依赖引入 -->
@@ -233,6 +240,16 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-clean-plugin</artifactId>
                 <version>3.1.0</version>
+            </plugin>
+
+            <!-- IDEA中SpringBoot热部署Dev-tool -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <fork>true</fork><!--必须添加这个配置-->
+                </configuration>
             </plugin>
 
             <!--

@@ -12,7 +12,7 @@ var websocket;
 
 function addsocket() {
 
-    var wsaddr = "ws://127.0.0.1:10100/websocket";
+    var wsaddr = "ws://127.0.0.1:8888/websocket";
     StartWebSocket(wsaddr);
 }
 
@@ -70,8 +70,8 @@ function onError(evt) {
 
 function SendMessage() {
     var data = {
-        name: "英雄无敌-3"
-        // value : "英雄无敌"
+        name: "Hello World GoodLuck Baby!!!"
+        // value : "World"
     }
 
     var externalMessageBytes = createExternalMessage(data);

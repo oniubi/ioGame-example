@@ -45,6 +45,6 @@ public class WebApplication {
     }
 
     public static void main(String[] args) {
-        start(8080);
+        start(8082);
     }
 }
